@@ -1,0 +1,37 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 id="hello_world" class="display-4 green-text" onmouseover="newColor()"
+    onmouseout="oldColor()">Pedro Capo, Farruko - Calma</h1>
+    
+   
+
+</div>
+
+<p>
+    A remix version featuring Farruko was released on October 5, 2018.
+    The remix video has received over 2.0 billion views on YouTube.
+    Since its release, the song has become a huge success, topping the
+    charts of Argentina, Bolivia, Chile, Colombia, Costa Rica, the Dominican Republic,
+    El Salvador, Guatemala, Italy, Mexico, Panama, Paraguay, Peru,
+    Uruguay and Venezuela. The song also received a Latin double-platinum certification
+    by the Recording Industry Association of America (RIAA) for units of over 120,000
+    sales plus track-equivalent streams.
+</p>
+
+<iframe width="929" height="383" src="https://www.youtube.com/embed/1_zgKRBrT0Y" title="Pedro Capó, Farruko - Calma (Remix - Official Video)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
+<p>
+<button onclick="myMove()">Click Me</button> 
+</p>
+
+<div id ="myContainer">
+<div id ="myAnimation"></div>
+</div>
+
+
