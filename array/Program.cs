@@ -1,20 +1,88 @@
 ﻿using System;
 using System.Collections.Generic;
-    internal class Program
-    {
+internal class Program
+{
     static void Main(string[] args)
 
-    { 
-        int[] numArray = new int[5];
-        numArray[0] = 5;
-        numArray[1] = 2;
-        numArray[2] = 10;
-        numArray[3] = 200;
-        numArray[4] = 5000;
+    {
+        //Array of strings
+        string[] colorArray = { "Red", "Orange", "Yellow", "Greed", "Blue", "Purple", "Black", "Pink", "Brown" };
 
-        int[] numArray1 = new int[] { 5, 2, 10, 200, 5000 };
+        // Ask the user for a number to display the string at the index
 
-        Console.WriteLine(numArray1[3]);
-        Console.ReadLine();
+        Console.WriteLine("Select a number between 0 and 9:");
+        int stringSelect = Convert.ToInt32(Console.ReadLine());
+        bool validString = false;
+
+        while (!validString)
+        {
+            try
+            {
+                Console.WriteLine("Your favorite color is " + colorArray[stringSelect]);
+                validString = true;
+            }
+            //Add a message to display if the user picks an index that doesn't exist
+            catch
+            {
+                Console.WriteLine("Sorry, that number selection is invalid. Please select a number between 0 and 9. ");
+                stringSelect = Convert.ToInt32(Console.ReadLine());
+            }
+        }
+
+        //List of strings
+        List<string> occupationList = new List<string>()
+        {
+            "Data analist", 
+            "UX Designer", 
+            "Artist", 
+            "Teacher", 
+            "Lawyer", 
+            "Cowboy", 
+            "Athlete", 
+            "Podcast Host", 
+            " Software Developer", 
+            "QA Tester"
+        };
+        //Ask the user for a number to display the string at that index
+        Console.WriteLine("Select another number between 0 and 9:");
+        int listSelect = Convert.ToInt32(Console.ReadLine());
+        bool validList = false;
+
+        while (!validList)
+        {
+            try
+            {
+                Console.WriteLine("Your new occupation is: " + occupationList[listSelect]);
+                validList = true;
+            }
+            //Add a message to display if the user picks an index that doesn't exist
+            catch
+            {
+                Console.WriteLine("Sorry, that number selection is invalid. Select a number between 0 and 9.");
+                listSelect = Convert.ToInt32(Console.ReadLine());
+            }
+        }
+
+        //Array of integers
+        int[] intArray = { 17, 22, 3, 67, 5, 91, 11, 42, 23, 6 };
+        //Ask the user for a nubmer to display the string at that index
+        Console.WriteLine("Select a third number between 0 and 9:");
+        int intSelect = Convert.ToInt32(Console.ReadLine());
+        bool validInt = false;
+
+        while (!validInt)
+        {
+            try
+            {
+                Console.WriteLine("Your lucky number is " + intArray[intSelect]);
+                validInt = true;
+            }
+            //Add a message to display if the user picks an index that doesn't exist
+            catch
+            {
+                Console.WriteLine("Sorry, that number selectionis invalid. Select a number between 0 and 9. ");
+                intSelect = Convert.ToInt32(Console.ReadLine());
+            }
+        }
     }
-    }
+}
